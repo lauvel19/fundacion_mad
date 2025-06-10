@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2? family= Playfair+Display:wght@400;500;600;700;800;900 & display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.banner { 
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(rgba(37, 37, 37, 0.5), rgba(0, 0, 0, 0.5)), url(images/back-view-old-man-sitting-bench.jpg);
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 80px;
+    padding: 20px;
+    justify-content: space-around;
+    font-weight: bold; 
+    position: fixed;
+    transition: 1s ease;
+}
+
+.subMenuNav {
+    display: grid;
+    width: 120%;
+    grid-template-columns: repeat(7, 14%);
+    grid-template-rows: 30px;
+    margin: 20px 50px;
+}
+
+.subMenuNav li {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    position: relative; 
+}
+
+.subMenuNav li a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.subMenu {
+    position: absolute; 
+    top: 100%;
+    left: 0;
+    display: grid;
+    padding: 5px;
+    grid-template-rows: repeat(3,50px);
+    width: 120%;
+    background-color: #8a8a8a;
+    border-radius: 5px;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.subMenu li {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+
+.subMenuNav li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Playfair Display", serif;
+}
+
+.navbar li:hover .subMenu {
+    visibility: visible;
+}
+
+.navbar.active {
+    background: #f0f0f0;
+    width: 100%;
+    margin: 0; 
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    z-index: 5;
+}
+
+.navbar.active .subMenuNav li a{
+    color: #606b72;
+}
+
+.navbar.active .subMenu {
+    background-color: #b4b4b4;
+}
+
+.navbar.active .subMenuNav {
+    margin: 20px 70px;
+    width: 96%;
+}
+
+.logo {
+    width: 200px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar ul li::after {
+    margin-top: 40px;
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #0caeff;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+    font-family: "Playfair Display", serif;
+} 
+
+.navbar ul li:hover::after {
+    width: 100%;
+} 
+
+.title-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text p {
+    margin: auto;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.title-text h1 {
+    font-size: 35px;
+}
+
+.content {
+    width: 40%;
+    position: absolute;
+    transform: translateX(40%);
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    top: 100px;
+    border-radius: 20px;
+}
+
+.content span {
+    animation: fade-in-out 2s infinite ease-in;
+}
+
+.content span:nth-child(2) {
+    animation-delay: 2s;
+}
+
+
+@keyframes fade-in-out {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.content h1 {
+    font-size: 30px;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+    display: inline-block;
+    font-family: "Playfair Display", serif;
+}
+
+.hcolor {
+    color: #0caeff;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.content p {
+    font-size: 17px;
+    display: inline-block;
+    align-items: center;
+    text-align: left;
+    margin: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 770px) {
+    .logo {
+        width: 70px;
+    }
+    .navbar ul li a {
+        font-size: 15px;
+        margin: 5px;
+        display: inline-block;
+    }
+    .content h1 {
+        text-align: left;
+        font-size: 30px;
+        display: inline-block;
+        margin: 0%;
+    }
+}
+
+/*--mision--*/
+
+.mision-contain {
+    background: rgb(224,236,255);
+    background: linear-gradient(0deg, rgba(224,236,255,1) 9%, rgba(240,240,240,1) 86%);
+}
+
+#mision {
+    width: 80%;
+    height: 550px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+}
+
+.mision-desc {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.mision-desc p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+.mision-desc h1 {
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.mision-desc img{
+    width: 80%;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 850px) {
+    #mision {
+        width: 100%;
+        height: 550px;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+    }
+    
+.mision-desc p {
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.mision-desc h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mision-desc img{
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+     }
+
+/*----vision-------*/
+
+
+#vision {
+    width: 100%;
+    padding: 70px 0;
+    display: flex;
+    background: rgb(240,240,240);
+    background: linear-gradient(0deg, rgba(240,240,240,1) 26%, rgba(224,236,255,1) 81%);
+}
+
+.vision-desc {
+    width: 80%;
+    align-items: center;
+    padding-left: 120px;
+}
+
+.vision-desc p {
+    width: 65%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+.vision-desc h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.vision-desc img{
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 850px) {
+
+    #vision {
+        width: 100%;
+        padding: 0;
+        display: flex;
+    }
+    
+    .vision-desc {
+        width: 100%;
+        padding-left: 10px;
+    }
+    
+    .vision-desc p {
+        width: 65%;
+        margin: 10px;
+        font-size: 15px;
+        padding-bottom: 20px;
+        padding-left: 0;
+        text-align: justify;
+    }
+    
+    .vision-desc h1 {
+        padding-left: 10px;
+        
+    }
+    
+    .vision-desc img{
+        width: 300px;
+    }
+    
+     }
+
+
+/*----------video------------*/
+.video { 
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(rgba(37, 37, 37, 0.5),
+    rgba(37, 37, 37, 0.5));
+    background-size: cover;  
+    background-position: center;
+}
+
+
+.back-video {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+@media (min-aspect-ratio: 16/9){
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .back-video {
+        width: 100%;
+        align-self: left;
+    }
+    .video {
+        width: 100%;
+        height: 390px;
+    }
+}
+
+
+/*--footer--*/
+
+#footer {
+    padding: 100px 0 20px;
+    background: #f0f0f0;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-row {
+    width: 80%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.left {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.footer-right {
+    text-align: right;
+}
+.right {
+    width: 10px;
+}
+
+.footer-row h1 {
+    margin: 10px 0;
+}
+
+.footer-row p {
+    line-height: 35px;
+}
+
+
+.footer-left .fa, .footer-right .fa {
+    font-size: 20px;
+    color: #0caeff;
+    margin: 10px;
+}
+
+
+.footer-img {
+    max-width: 250px;
+    opacity: 0.2;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links .fa {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 5px;
+    border: 1px solid #0caeff;
+    margin: 40px 5px 0;
+    color: #0caeff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+.social-links .fa:hover {
+    background: #3b78bc;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.social-links p {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 770px) {
+    
+    .footer-left, .footer-right {
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .footer-img{
+        top: 25%;
+    }
+
+.social-links .fa {
+        transition: .5s;
+    }
+    
+
+}
